@@ -261,7 +261,7 @@ footer a:hover {
 @media (max-width:890px) { 
     .moon {
         height: 1100px;
-        animation:none:
+        animation:none;
     }
     .roro {
         height: 700px;

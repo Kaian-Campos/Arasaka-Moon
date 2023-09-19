@@ -260,10 +260,12 @@ footer a:hover {
 
 @media (max-width:890px) { 
     .moon {
-        height: 1100px
+        height: 1100px;
+        animation:none:
     }
     .roro {
         height: 700px;
+        animation: none;
     }
 }
 

@@ -35,7 +35,7 @@ header {
     align-items: end;
 }
 .logo img {
-    height: 32px;
+    height: clamp(25px, 5vw, 32px);
     width: auto;
     transition: all .3s ease ;
 }
@@ -45,6 +45,7 @@ header {
 .menu {
     display: flex;
     align-items: end;
+    transition: all .3s ease ;
 }
 nav ul, nav li {
     list-style: none;
@@ -85,15 +86,16 @@ nav a:hover {
 }
 .central h1 {
     color: #c2c1c2;
-    font-size: 80px;
+    font-size: clamp(57px, 8vw, 80px);
     margin-bottom: 30px;
-    line-height: 85px;
+    line-height: clamp(55px, 8vw, 85px);
+    transition: all .3s ease ;
 }
 .central h2 {
     color: #c2c1c2;
-    font-size: 24px;
-    width: 500px;
+    font-size: clamp(17px, 2.4vw,24px);
     margin-bottom: 200px;
+    transition: all .3s ease ;
 }
 .central span {
     color: #e60000;
@@ -106,9 +108,14 @@ nav a:hover {
 .mid{
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.mid h1 {
     color: #c2c1c2;
-    font-size: 30px;
-    margin-bottom: 50px;
+    font-size: clamp(23px, 3.6vw, 45px);
+    transition: all .3s ease ;
 }
 
 
@@ -124,18 +131,22 @@ nav a:hover {
     flex-wrap: wrap;
 }
 .plans h1 {
-    font-size: 50px;
+    font-size: clamp(40px, 6vw, 50px);
     font-weight: 100;
+    transition: all .3s ease ;
 }
 .plans h3 {
     font-weight: 100;
     margin-top: 20px;
+    font-size: clamp(17px, 2.4vw, 21px);
     margin-bottom: 5px;
+    transition: all .3s ease ;
 }
 .plans li {
     line-height: 25px;
-    font-size: 17px;
+    font-size: clamp(15px, 2vw, 17px);
     list-style: none;
+    transition: all .3s ease ;
 }
 .red{
     margin-right: 5px;
@@ -146,13 +157,15 @@ nav a:hover {
 .plans span {
     color: #e60000;
     line-height: 25px;
-    font-size: 23px;
-    margin-bottom: 10px
+    font-size: clamp(20px, 2.4vw, 23px);
+    margin-bottom: 10px;
+    transition: all .3s ease ;
 }
 .plans button {
     background-color: rgba(10,10,10,.4);
     color: #c2c1c2;
     padding: 10px;
+    font-size: clamp(15px, 2vw, 17px);
     margin-top: 15px;
     transition: all .3s ease;
 }
@@ -170,7 +183,8 @@ nav a:hover {
     height: 420px;
     background-color:  rgba(40,40,40,0.3);
     border-radius: 40px 0px 40px 0px;
-    margin-bottom: 20px;
+    margin: 10px 10px;
+    transition: all .3s ease ;
 }
 .options_bar {
     width: 240px;
@@ -185,15 +199,16 @@ nav a:hover {
 
 .roro {
     top: 150px;
-    left: 95px;
+    left: clamp(-30px, 7vw, 95px);
     position: absolute;
     z-index: -1;
     width: auto;
-    height: 700px;
+    height: clamp(400px, 66vw, 700px);
     object-fit: contain;
     opacity: 0.3;
     overflow: hidden;
     rotate: 64deg;
+    transition: all .3s ease ;
 }
 .roro {
     animation: moveRoro 5s ease-in-out infinite alternate;
@@ -211,10 +226,11 @@ nav a:hover {
     position: absolute;
     z-index: -1;
     width: auto;
-    height: 1210px;
+    height: clamp(1000px, 145vw, 1230px);
     object-fit: contain;
     opacity: 0.3;
     overflow: hidden;
+    transition: all .3s ease ;
 }
 .moon {
     animation: moveMoon 80s ease-in-out infinite alternate;
@@ -222,7 +238,7 @@ nav a:hover {
 
 @keyframes moveMoon {
     from {
-        transform: rotate(360deg) scale(1.1);
+        transform: rotate(360deg) scale(1.09);
     }
 }
 
@@ -257,44 +273,26 @@ footer a {
 footer a:hover {
     transform: scale(1.1);
 }
-
+header, .central{
+    margin-left: 20px;
+}
 @media (max-width:890px) { 
     .moon {
-        height: 1100px;
         animation:none;
     }
     .roro {
-        height: 700px;
         animation: none;
     }
 }
 
 @media (max-width:650px) { 
-    .moon {
-        height: 1000px
-    }
     .menu {
         display: none;
     }
     .roro {
-        height: 450px;
-        left: -30px;
-        top: 160px;
-    }
-    .central h1 {
-        font-size: 50px;
-        width: auto;
-        line-height:56px;
-    }
-    .central h2 {
-        width: auto;
-        font-size: 17px;
-    }
-    .mid {
-        font-size: 17px;
+        top: 180px;
     }
     header, .central{
         margin-left: 20px;
     }
-
 }
